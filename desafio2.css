@@ -57,14 +57,15 @@ header {
 }
             
 #wrapper h1 {
+    color: var(--color-rocket);
     font-size: 60px;
     line-height: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-weight: bold;
 }
 
 #wrapper h2 {
-    font-size: 20px;
+    font-size: 19px;
     line-height: 30px;
     margin: 0 auto;
     font-weight: normal;
@@ -76,16 +77,114 @@ header {
 #wrapper ul {
     font-size: 15px;
     line-height: 25px;
-    margin-top: 10px;
-    display: flex;
-    flex-direction: column;
-    max-width: 85px;
-    margin: 32px auto;
+    margin-top: 5px;
+    display: inline-table;
+    align-content: space-between;
+    max-width: 200px;
+    margin: 20px auto;
     opacity: 0.8;
 
 }
 
+#wrapper li {
+    margin: 0 30px;
+}
+
+
+#links-foote {
+    padding: 20px;
+}
+
 #links-footer a {
     border-bottom: 1px solid var(--color-green);
+    font-size: 20px;
     
+}
+
+.cards {
+    max-width: 1400px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    cursor: pointer;
+}
+
+.card {
+    background-color: #483a74;
+}
+
+.card:hover {
+    color: var(--color-green);
+    transition: color 200ms;
+}
+
+
+.card__image-container img {
+    width: 100%;
+    height: 200px;
+}
+
+.card__content,
+.card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.card__price {
+    background-color: var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto;
+    position: relative;
+}
+
+.modal .close-modal {
+    color: black;
+    position: absolute;
+    right: 8px;
+    top: 8px;
+    cursor: pointer;
+}
+
+.modal .maximize-modal {
+    color: black;
+    position: absolute;
+    right: 32px;
+    top: 16px;
+    cursor: pointer;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
 }
